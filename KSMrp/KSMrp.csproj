@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D83CFC41-CCFE-455C-BCC0-191A6B99E913}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KSMrp</RootNamespace>
+    <AssemblyName>KSMrp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Carousel_s3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net46\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsSysPara.cs" />
+    <Compile Include="clsUI.cs" />
+    <Compile Include="DateDiff.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdjM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdjM.Designer.cs">
+      <DependentUpon>frmAdjM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBufferVM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBufferVM.Designer.cs">
+      <DependentUpon>frmBufferVM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuffer.Designer.cs">
+      <DependentUpon>frmBuffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevice.Designer.cs">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMachine.Designer.cs">
+      <DependentUpon>frmMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackage.Designer.cs">
+      <DependentUpon>frmPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPassword.Designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQMno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQMno.Designer.cs">
+      <DependentUpon>frmQMno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQPos.Designer.cs">
+      <DependentUpon>frmQPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuit.Designer.cs">
+      <DependentUpon>frmQuit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShelfLife.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShelfLife.Designer.cs">
+      <DependentUpon>frmShelfLife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStore.Designer.cs">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStoreHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStoreHouse.Designer.cs">
+      <DependentUpon>frmStoreHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStoreInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStoreInput.Designer.cs">
+      <DependentUpon>frmStoreInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStorePos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStorePos.Designer.cs">
+      <DependentUpon>frmStorePos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUPCdata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUPCdata.Designer.cs">
+      <DependentUpon>frmUPCdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdater.Designer.cs">
+      <DependentUpon>frmUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExcelImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExcelImport.Designer.cs">
+      <DependentUpon>frm_ExcelImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_StartProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_StartProcess.Designer.cs">
+      <DependentUpon>frm_StartProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_StoreMultiIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_StoreMultiIn.Designer.cs">
+      <DependentUpon>frm_StoreMultiIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Sub_StoreAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Sub_StoreAdd.Designer.cs">
+      <DependentUpon>frm_Sub_StoreAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Sub_StoreCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Sub_StoreCopy.Designer.cs">
+      <DependentUpon>frm_Sub_StoreCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMain.Designer.cs">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInM.Designer.cs">
+      <DependentUpon>frmInM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutM.Designer.cs">
+      <DependentUpon>frmOutM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modCtrl.cs" />
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ExportService.cs" />
+    <Compile Include="Report\frm_ReportLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ReportLV.Designer.cs">
+      <DependentUpon>frm_ReportLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlData.cs" />
+    <Compile Include="WordTextBox.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdjM.resx">
+      <DependentUpon>frmAdjM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBufferVM.resx">
+      <DependentUpon>frmBufferVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuffer.resx">
+      <DependentUpon>frmBuffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevice.resx">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMachine.resx">
+      <DependentUpon>frmMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackage.resx">
+      <DependentUpon>frmPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQMno.resx">
+      <DependentUpon>frmQMno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQPos.resx">
+      <DependentUpon>frmQPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuit.resx">
+      <DependentUpon>frmQuit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShelfLife.resx">
+      <DependentUpon>frmShelfLife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStore.resx">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStoreHouse.resx">
+      <DependentUpon>frmStoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStoreInput.resx">
+      <DependentUpon>frmStoreInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStorePos.resx">
+      <DependentUpon>frmStorePos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUPCdata.resx">
+      <DependentUpon>frmUPCdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdater.resx">
+      <DependentUpon>frmUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExcelImport.resx">
+      <DependentUpon>frm_ExcelImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StartProcess.resx">
+      <DependentUpon>frm_StartProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StoreMultiIn.resx">
+      <DependentUpon>frm_StoreMultiIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sub_StoreAdd.resx">
+      <DependentUpon>frm_Sub_StoreAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sub_StoreCopy.resx">
+      <DependentUpon>frm_Sub_StoreCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiMain.resx">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInM.resx">
+      <DependentUpon>frmInM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOutM.resx">
+      <DependentUpon>frmOutM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_ReportLV.resx">
+      <DependentUpon>frm_ReportLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnClose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\入庫.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\領料.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\物料中心.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\報表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\設定.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnaway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btncaption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnsignout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右箭頭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左箭頭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nsKXMSUC\nsKXMSUC.csproj">
+      <Project>{e7ef08c4-9c68-42e8-bcf7-1603ae5c6328}</Project>
+      <Name>nsKXMSUC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Carousel_s3.ico" />
+    <None Include="Resources\Excel_format.PNG" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\Open File.png" />
+    <None Include="Resources\批次領料.ico" />
+    <None Include="Resources\批次入庫.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
