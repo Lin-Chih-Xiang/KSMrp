@@ -29,8 +29,8 @@ namespace KSMrp
         public string BackupDir = @"C:\KXMS\Backup";           //備份路徑                                                                                  // public string BackupDir = @"C:\Users\MIS\Desktop\金士頓\KSMrp\KSMrp\bin";           //備份路徑
         public int AutoID = 0;
         public string UID = "";
-        public string Pass = "001";
-        public string Power = "001";
+        public string Pass = "";
+        public string Power = "";
         public int MaxDevice = 0;
         public string _DialogResult = "";
 
